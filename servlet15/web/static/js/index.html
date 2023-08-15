@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>大学生兼职平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="description" content="" />
+    <meta name="Keywords" content="xxxx商城app," />
+    <!--<meta name="apple-itunes-app" content="app-id=477927812" />-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="location" content="province=;city=;coord=" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="apple-touch-icon-precomposed" href="images/screenLogo.png" />
+    <link rel="stylesheet" type="text/css" href="css/m2015.css" />
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <script src="js/zepto.min.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/swiper.min.js" type="text/javascript"></script>
+    <style>
+        .hot-news-roller dt { width: 75px; }
+        .hot-news-roller dd { margin-right: 0; }
+        .hot-news-roller dd ul li i {
+            display: inline-block;
+            border: solid 1px #f44623;
+            color: #f44623;
+            height: 18px;
+            line-height: 18px;
+            padding: 0 5px;
+            border-radius: 5px;
+            margin-right: 5px;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+<div class="index_wrapper">
+    <header>
+        <div class="index-top">
+            <span>大学生兼职平台</span>
+            <a href="login.html">登录</a>
+            <a href="reg.html">注册</a>
+        </div>
+    </header>
+
+    <div class="bannerbox">
+        <div class="banner">
+            <ul>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz.png"></a>
+                </li>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz4.png"/></a>
+                </li>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz8.png"/></a>
+                </li>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz7.png"/></a>
+                </li>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz9.png" /></a>
+                </li>
+                <li>
+                    <a href="javascript:;"> <img src="images/index/jianz10.png"  /></a>
+                </li>
+            </ul>
+            <div class="ban-nav">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".banner").css({ height: $(".banner").width() / 640 * 240 });
+
+        $('.banner').swipeSlide({
+            continuousScroll: true,
+            speed: 3000,
+            transitionType: 'cubic-bezier(0.22, 0.69, 0.72, 0.88)'
+        }, function(i) {
+            $('.ban-nav').children().eq(i).addClass('cur').siblings().removeClass('cur');
+        });
+        $("#s_inputbox").css({ width: $(window).width() - 90 });
+
+        //点击X 顶部input框显示
+        $(".btn_sou").click(function(){
+            if($(this).hasClass("active")){
+                $(this).removeClass("active");
+                $(".search").removeClass("active")
+            }else{
+                $(this).addClass("active");
+                $(".search").addClass("active")
+            }
+        })
+
+    </script>
+    <nav class="index_nav border_bottom">
+        <div class="index_menu flex">
+            <a href="javascript:;"><img src="images/index/nav/number1.png" width="36" height="36" /><span>附近职位</span></a>
+            <a href="javascript:;"><img src="images/index/nav/number2.png" width="36" height="36" /><span>申请记录</span></a>
+            <a href="javascript:;"><img src="images/index/nav/number3.png" width="36" height="36" /><span>求职消息</span></a>
+            <a href="javascript:;" id="kefu"><img src="images/index/nav/number4.png" width="36" height="36" /><span>我的简历</span></a>
+        </div>
+    </nav>
+
+    <div class="baokuan floor">
+        <h3><i style="background:#f44623"></i>
+            热招职位
+<!--            <a href="javascript:;">热门职位<s class="arrow_r"></s></a>-->
+        </h3>
+        <div class="bk-slide">
+            <div class="swiper-wrapper">
+              <a href="javascript:;"><span>会计</span></a>
+                <a href="javascript:;"><span>java</span></a>
+                <a href="javascript:;"><span>司机</span></a>
+                <a href="javascript:;"><span>教师</span></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var baokuan = new Swiper('.bk-slide', { slidesPerView: 3, slidesPerColumn: 1, freeMode: true, spaceBetween: 10, });
+    </script>
+    <nav class="pic-nav flex">
+        <div class="flex-item">
+            <a href="goods_detail.html"><img src="images/20151205115552_8098.jpg" /></a>
+        </div>
+        <div class="flex-item">
+            <a href="goods_detail.html"><img src="images/20151204113830_6480.jpg" /></a>
+            <a href="goods_detail.html"><img src="images/20151210085508_4292.jpg" /></a>
+        </div>
+        <div class="flex-item">
+            <a href="goods_detail.html"><img src="images/20151127145216_9351.jpg" /></a>
+            <a href="goods_detail.html"><img src="images/20151119144218_9335.jpg" /></a>
+        </div>
+    </nav>
+    <div class="floor">
+        <h3><i style="background:#c44cde"></i>好货推荐</h3>
+        <ul>
+            <li>
+                <div class="aditem">
+                    <a href="goods_detail.html"><img src="images/20151209163811_7000.jpg" /></a>
+                </div>
+                <div class="aditem">
+                    <a href="goods_detail.html"><img src="images/20151210184213_1472.jpg" /></a>
+                </div>
+            </li>
+            <li>
+                <div class="aditem">
+                    <a href="goods_detail.html"><img src="images/20151205115917_7912.jpg" /></a>
+                </div>
+                <div class="aditem">
+                    <a href="goods_detail.html"><img src="images/20151208101058_4434.jpg" /></a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="foot-nav border_top hide" style="">
+        <a href="index.html"><i class="home"></i><span>首页</span></a>
+        <a href="person_index.html"><i class="user"></i><span>我的</span></a>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(".foot-nav").show();
+    $(".foot-nav a").eq(0).addClass("cur");
+
+    function scrollUp(tag, height, timer) {
+        tag.each(function() {
+            var ul = $(this).find("ul");
+            setInterval(function(){
+                ul.animate({ marginTop: - height }, "normal", function(){
+                    ul.find("li:first").clone().appendTo(ul);
+                    ul.find("li:first").remove();
+                    ul.css({ marginTop: 0 });
+                })
+            }, timer);
+        });
+    };
+
+   scrollUp($(".notice-roller"), 40, 3000);
+
+    //点击搜索
+    $(".sear").click(function(){
+        alert("搜索功能暂未开启")
+    })
+
+    //底部按钮-回到顶部
+    $(".backtop_btn").click(function(){
+        $(window).scrollTop(0);
+        return false;
+    })
+</script>
+
+</body>
+
+</html>
